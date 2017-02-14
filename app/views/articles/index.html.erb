@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <div class = "container">
+    <h1>Articles list</h1>
+
+    <%= link_to "New Article", new_article_path(@article) %>
+
+    <% @articles.each do |article| %>
+    <h2><%= article.title %></h2>
+    <p><%= article.content %></p>
+    <p> <%= link_to "Show article", article_path(article), class: "btn btn-primary" %> </p>
+
+
+    <p> -------------------------------------- </p>
+    <%end%>
+  </div>
